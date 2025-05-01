@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+  }
+
+  .img-zoom-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 1rem;
+    position: relative;
+  }
+
+  .img-zoom-lens {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.3);
+    cursor: crosshair;
+    display: none;
+    pointer-events: none; /* Prevent triggering pointerleave on hover */
+  }
+
+  .img-zoom-result {
+    border: 1px solid #d4d4d4;
+    width: 40vw;
+    height: 40vw;
+    max-width: 400px;
+    max-height: 400px;
+    background-repeat: no-repeat;
+    display: none;
+  }
+
+  @media (max-width: 600px) {
+    .img-zoom-result {
+      width: 90vw;
+      height: 90vw;
+      margin-top: 1rem;
+    }
+
+    .img-zoom-container {
+      flex-direction: column;
+    }
+  }
